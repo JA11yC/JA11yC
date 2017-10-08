@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "npm run build:watch & npm run server",
-    "server": "browser-sync start --server 'docs' --files 'src/**/*'",
+    "server": "browser-sync start --server 'docs' --files 'src/**/*', docs/*.html",
     "build": "npm run build:css && npm run build:images && npm run build:js",
     "build:watch": "npm-run-all -p watch:*",
     "build:images": "imagemin src/images/* -o docs/images",

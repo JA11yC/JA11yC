@@ -1,8 +1,40 @@
 html {
-  font-family: sans-serif;
+  color: #212121;
+  font-family: Hiragino Sans, Meiryo, sans-serif;
+  font-weight: 300;
   line-height: 1.5;
 }
 
 img {
   max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-feature-settings: "palt" 1;
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 3px solid currentColor;
+  font-weight: 600;
+}
+
+dd {
+  margin: 0;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.u-dib {
+  display: inline-block;
 }

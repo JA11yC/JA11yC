@@ -2,31 +2,41 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Japan Accessibility Conference(JAC)</title>
+  <title>Japan Accessibility Conference(JAC) vol.1</title>
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
-  <header>
-    <h1>Japan Accessibility Conference vol.1</h1>
-    <p>国内最大級・最大規模のアクセシビリティカンファレンス 〜アクセシビリティのこれまでとこれから〜</p>
+  <header class="site-header">
+    <h1>Japan<br/>Accessibility<br/>Conference</h1>
+    <p>国内最大級のアクセシビリティ<wbr />カンファレンス</p>
+    <p>〜アクセシビリティのこれまでとこれから〜</p>
     <p><time datetime="2017-11-11">2017年11月11日(土)</time> 13:00 - 18:00</p>
     <p>LODGE, Yahoo! JAPAN<br>
     （<a href="https://map.yahoo.co.jp/maps?bbox=139.73134799%2C35.67409495%2C139.74254799%2C35.68529495&id=827ba31f731188171e7ab4a74622daf8e13c5188&cond=ac%3A13101%3Bbounds%3A139.73134799%2C35.67409495%2C139.74254799%2C35.68529495%3Baz%3A35.1.3%3Bq%3A%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E7%B4%80%E5%B0%BE%E4%BA%95%E7%94%BA1-3%3Bplacegenre%3Aaddress%3Bid%3A827ba31f731188171e7ab4a74622daf8e13c5188%3B&p=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E7%B4%80%E5%B0%BE%E4%BA%95%E7%94%BA1-3&ac=13101&az=35.1.3&zoom=18&lat=35.679694949999984&lon=139.73694799&pluginid=pa&z=18&mode=map&active=true&layer=pa&home=on&hlat=35.679694949999984&hlon=139.73694799&pointer=off&pan=off&ei=utf8&v=3">東京ガーデンテラス紀尾井町</a>）
     </p>
   </header>
-  <nav>
+  <nav class="home-navigation">
     <ul>
       <li><a href="#session">セッション</a></li>
       <li><a href="#access">アクセス</a></li>
       <li><a href="#sponsors">スポンサー</a></li>
     </ul>
   </nav>
-  <main>
+  <main class="main">
     <section id="outline">
-      <h2>国内最大級・最大規模のアクセシビリティカンファレンス</h2>
+      <h2>
+        国内最大級・最大規模の<span class="u-dib">アクセシビリティカンファレンス</span>
+      </h2>
       <p>Twitterハッシュタグ : <a href="https://twitter.com/hashtag/ja11yc?f=tweets&src=hash">#ja11yc</a></p>
       </dl>
+    </section>
+    <section class="register">
+      <p>
+        <a class="callToAction" href="https://connpass.com/event/68762/">
+          connpassイベントページから申し込む
+        </a>
+      </p>
     </section>
     <section id="session">
       <h2>セッション</h2>
@@ -40,9 +50,8 @@
               <th>時間</th>
               <th>Room A</th>
               <th>Room B</th>
-              <th>Room C</th>
             </tr>
-            <tr>
+            <tr class="Timetable__greeting -welcom">
               <th>13:00 - 13:10</th>
               <td colspan="3">はじめに</td>
             </tr>
@@ -50,12 +59,11 @@
               <th>13:10 - 14:10</th>
               <td colspan="3">
                 <dl class="Session">
-                  <dt>基調講演 「UX in Sceince」</dt>
+                  <dt>
+                    <a class="Session__title" href="session.html#ux-in-sceince">基調講演 「UX in Sceince」</a>
+                  </dt>
                   <dd>
-                    <ul>
-                      <li>元Yahoo Korea CEO Kim JInsoo 株式会社</li>
-                      <li>SNC Lab 代表取締役 張善英(ジャンソンヨン)</li>
-                    </ul>
+                    <p class="Session__speaker">元Yahoo Korea CEO Kim JInsoo</p>
                   </dd>
                 </dl>
               </td>
@@ -69,33 +77,27 @@
               <td>
                 <dl class="Session">
                   <dt>
-                    <span class="Session__id">セッションA-1</span>
-                    「セッションタイトル未定」
+                    <span class="Session__id">A-1</span>
+                    <a class="Session__title" href="session.html#inclusive-design-of-accessibility">
+                      アクセシビリティのインクルーシブデザイン
+                    </a>
                   </dt>
                   <dd>
-                    <p>株式会社 SNC Lab 代表取締役 張善英(ジャンソンヨン)</p>
+                    <p class="Session__speaker">株式会社 SNC Lab 代表取締役 張善英(ジャンソンヨン)</p>
                   </dd>
                 </dl>
               </td>
               <td>
                 <dl class="Session">
                   <dt>
-                    <span class="Session__id">セッションB-1</span>
-                    「セッションタイトル未定」
+                    <span class="Session__id">B-1</span>
+                    <a class="Session__title" href="session.html#accessibility-coding">チームで取り組む！アクセシビリティコーディング</a>
                   </dt>
                   <dd>
-                    <p>サイボウズ株式会社 小林大輔</p>
-                  </dd>
-                </dl>
-              </td>
-              <td>
-                <dl class="Session">
-                  <dt>
-                    <span class="Session__id">セッションC-1</span>
-                    「アクセシビリティ・ガイドラインの歩き方（初心者編）」
-                  </dt>
-                  <dd>
-                    <p>もんど（@momdo_）</p>
+                    <p class="Session__speaker">
+                      <img class="Session__speakerPhoto" src="images/kobayashi.jpg" alt="">
+                      サイボウズ株式会社 小林大輔
+                    </p>
                   </dd>
                 </dl>
               </td>
@@ -109,122 +111,126 @@
               <td>
                 <dl class="Session">
                   <dt>
-                    <span class="Session__id">セッションA-2</span>
-                    「セッションタイトル未定」
+                    <span class="Session__id">A-2</span>
+                    <a class="Session__title" href="session.html#NVDA-introduction">アクセシビリティ検証ツールとしてのNVDA入門</a>
                   </dt>
                   <dd>
-                    <p>元Yahoo Korea CEO Kim JInsoo</p>
+                    <p class="Session__speaker">
+                      <img class="Session__speakerPhoto" src="images/nishimoto.jpg" alt="">
+                      NVDA日本語チーム 西本卓也</p>
                   </dd>
                 </dl>
               </td>
               <td>
                 <dl class="Session">
                   <dt>
-                    <span class="Session__id">セッションB-2</span>
-                    「アクセシビリティに対する WordPress の責任について」
+                    <span class="Session__id">B-2</span>
+                    <a class="Session__title" href="session.html#wordpress-responsivility-accessibility">
+                      アクセシビリティに対する WordPress の責任について
+                    </a>
                   </dt>
                   <dd>
-                    <p>合同会社ロックロブスター 三好隆之</p>
-                  </dd>
-                </dl>
-              </td>
-              <td>
-                <dl class="Session">
-                  <dt>
-                    <span class="Session__id">セッションC-2</span>
-                    「セッションタイトル未定」
-                  </dt>
-                  <dd>
-                    <ul>
-                      <li>freee株式会社 伊原力也</li>
-                      <li>株式会社ビジネス・アーキテクツ 太田良典</li>
-                    </ul>
+                    <p class="Session__speaker">
+                      <img class="Session__speakerPhoto" src="images/miyoshi.jpg" alt="">
+                      合同会社ロックロブスター 三好隆之
+                    </p>
                   </dd>
                 </dl>
               </td>
             </tr>
             <tr class="Timetable__rest">
               <th>16:00 - 16:20</th>
-              <td colspan="3">休憩・移動（10分）</td>
+              <td colspan="3">休憩・移動（20分）</td>
             </tr>
             <tr>
               <th>16:20 - 17:00</th>
               <td>
                 <dl class="Session">
                   <dt>
-                    <span class="Session__id">セッションA-3</span>
-                    「セッションタイトル未定」
+                    <span class="Session__id">A-3</span>
+                    <span class="Session__title">セッションタイトル未定</span>
                   </dt>
                   <dd>
-                    <p>ヤフー株式会社 福本翔</p>
+                    <p class="Session__speaker">ヤフー株式会社 福本翔</p>
                   </dd>
                 </dl>
               </td>
               <td>
                 <dl class="Session">
                   <dt>
-                    <span class="Session__id">セッションB-3</span>
-                    「セッションタイトル未定」
+                    <span class="Session__id">B-3</span>
+                    <a class="Session__title" href="session.html#how-to-read-accessibility-guidelines">アクセシビリティ・ガイドラインの歩き方（初心者編）</a>
                   </dt>
                   <dd>
-                    <p>NVDA日本チーム代表 西本卓也</p>
+                    <p class="Session__speaker">
+                      <img class="Session__speakerPhoto" src="images/momdo.png" alt="">
+                      もんど<span class="u-dib">(@momdo_)</span>
+                    </p>
                   </dd>
                 </dl>
-              </td>
-              <td>
-                <p class="Session">
-                  <span class="Session__id">セッションC-3</span>
-                  「セッション未定」
-                </p>
               </td>
             </tr>
             <tr class="Timetable__rest">
               <th>17:00 - 17:20</th>
-              <td colspan="3">休憩・移動（10分）</td>
+              <td colspan="3">休憩・移動（20分）</td>
             </tr>
             <tr>
               <th>17:20 - 18:00</th>
               <td>
                 <dl class="Session">
                   <dt>
-                    <span class="Session__id">セッションA-4</span>
-                    「パネルディスカッション（仮）」
+                    <span class="Session__id">C-2</span>
+                    <span class="Session__title">「セッションタイトル未定」</span>
                   </dt>
                   <dd>
-                    <ul>
-                      <li>元Yahoo Korea CEO Kim JInsoo 株式会社</li>
-                      <li>SNC Lab 代表取締役 張善英(ジャンソンヨン)</li>
+                    <ul class="Session__speakers">
+                      <li class="Session__speaker">freee株式会社 伊原力也</li>
+                      <li class="Session__speaker">株式会社ビジネス・アーキテクツ 太田良典</li>
                     </ul>
-                    <p>さらに参加者</p>
                   </dd>
                 </dl>
               </td>
               <td>
                 <dl class="Session">
                   <dt>
-                    <span class="Session__id">セッションB-4</span>
-                    「メディア事業でのアクセシビリティ展開事例・CAではこうやってます」
+                    <span class="Session__id">B-4</span>
+                    <a class="Session__title" href="session.html#extend-accessibility-in-media-service">
+                      メディア事業でのアクセシビリティ展開事例・CAではこうやってます
+                    </a>
                   </dt>
                   <dd>
-                    <ul>
-                      <li>株式会社サイバーエージェント 桝田草一</li>
-                      <li>土岐真里奈</li>
+                    <ul class="Session__speakers">
+                      <li class="Session__speaker">
+                        <img class="Session__speakerPhoto" src="images/masuda.jpg" alt="">
+                        株式会社サイバーエージェント 桝田草一
+                      </li>
+                      <li class="Session__speaker">
+                        <img class="Session__speakerPhoto" src="images/tokimari.png" alt="">
+                        株式会社サイバーエージェント 土岐真里奈
+                      </li>
                     </ul>
                   </dd>
                 </dl>
               </td>
-              <td>
-                <p class="Session">
-                  <span class="Session__id">セッションC-4</span>
-                  「調整中」
-                </p>
-              </td>
+            </tr>
+            <tr class="Timetable__greeting -farewell">
+              <th>18:00 - 18:10</th>
+              <td colspan="3">おわりに</td>
             </tr>
           </tbody>
         </table>
       </section>
-      <p><small>セッションの内容/詳細は決まり次第追加していきます。</small></p>
-      <p><small>※セッションの部屋、時間/順序は変更になる可能性がございます。ご了承ください。</small></p>
+      <p>
+        <small>※セッションの内容/詳細は決まり次第追加していきます。</small><br />
+        <small>※セッションの部屋、時間/順序は変更になる可能性がございます。ご了承ください。</small>
+      </p>
+    </section>
+    <section class="register">
+      <p>
+        <a class="callToAction" href="https://connpass.com/event/68762/">
+          connpassイベントページから申し込む
+        </a>
+      </p>
     </section>
     <section id="access">
       <h2>アクセス</h2>
@@ -254,17 +260,25 @@
       </section>
     </section>
     <section id="sponsors">
-      <h2>スポンサー</h2>
+      <h2>主催・スポンサー</h2>
       <section>
-        <h3>協賛</h3>
-        <ul>
-          <li>freee株式会社</li>
-        </ul>
-      </section>
-      <section>
-        <h3>登壇スポンサー</h3>
-        <ul>
-          <li>NVDA日本語チーム</li>
+        <h3>主催</h3>
+        <ul class="Sponsors">
+          <li>
+            <a href="https://www.yahoo.co.jp/">
+              <img src="./images/logo-yahoo.svg" alt="ヤフー株式会社" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.cyberagent.co.jp/">
+              <img src="./images/logo-cyberagent.svg" alt="株式会社サイバーエージェント" />
+            </a>
+          </li>
+          <li>
+            <a href="https://cybozu.co.jp/">
+              <img src="./images/logo-cybozu.png" alt="サイボウズ株式会社" />
+            </a>
+          </li>
         </ul>
       </section>
     </section>
@@ -277,8 +291,9 @@
       </ul>
     </section>
   </main>
-  <footer>
+  <footer class="site-footer">
     <p><small>© 2017 Japan Accessibility Conference</small></p>
+    <p>JAC! JAC! JAC!</p>
   </footer>
 <script src="./script/main.js"></script>
 </body>
