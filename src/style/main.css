@@ -140,11 +140,11 @@
 }
 
 .Timetable__greeting td {
-  border-bottom: 3px solid currentColor;
+  border-bottom: 3px solid #eaeaea;
 }
 
-.Timetable__greeting td {
-  border-top: 3px solid currentColor;
+.Timetable__farewell td {
+  border-top: 3px solid #eaeaea;
 }
 
 .Session + .Session {
@@ -184,7 +184,7 @@
 }
 
 .Session__speaker {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   word-break: break-all;
