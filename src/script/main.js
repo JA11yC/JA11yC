@@ -1,5 +1,1 @@
-import $ from 'jquery';
-
-$(() => {
-  console.log('JAC!JAC!JAC!');
-});
+console.log('JAC!JAC!JAC!');
