@@ -349,6 +349,14 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .Sponsors {
+    width: calc(1280px * 0.9);
+    margin-right: calc((40em - (1280px * 0.9)) / 2);
+    margin-left: calc((40em - (1280px * 0.9)) / 2);
+  }
+}
+
 .Sponsors a {
   border: 0;
 }
