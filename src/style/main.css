@@ -208,6 +208,10 @@
   margin-top: 8px;
 }
 
+.Session.-keynote .Session__speaker {
+  justify-content: center;
+}
+
 .Session__speakerPhoto {
   width: 48px;
   height: 48px;
