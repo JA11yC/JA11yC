@@ -10,16 +10,23 @@
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-  padding: 40px 5%;
+  padding: 40px 10%;
   background-color: #121212;
   color: #fff;
   text-align: center;
 }
 
-@media (min-width: 48.4em) {
+@media (min-width: 64em) {
   .siteHeader {
-    padding: 200px 10%;
+    padding-top: 200px;
+    padding-bottom: 120px;
   }
+
+  .siteHeader > * {
+    max-width: calc((100% - 60px) / 2);
+    box-sizing: border-box;
+  }
+
   .siteHeader h1 {
     margin: 0 60px 0 0;
   }
@@ -27,10 +34,6 @@
 
 .siteHeader h1 a {
   border: 0;
-}
-
-.siteDescription {
-  text-align: left;
 }
 
 .siteDescription > *:first-child {
@@ -44,21 +47,36 @@
 .siteDescription__leed {
   margin-bottom: 24px;
   font-weight: 600;
+  font-size: calc(14 / 16 * 1em);
 }
 
-@media (min-width: 48.4em) {
+@media (min-width: 64em) {
+  .siteDescription {
+    text-align: left;
+  }
   .siteDescription__leed {
-    font-size: calc(28 / 16 * 1em);
+    font-size: 1.75vw;
   }
 }
 
 .siteDescription__details {
   margin-bottom: 36px;
+  font-size: calc(14 / 16 * 1em);
+  text-align: left;
 }
 
 .siteDescription__details > div {
   display: flex;
   flex-wrap: wrap;
+}
+
+@media (min-width: 64em) {
+  .siteDescription__details > div {
+    flex-wrap: nowrap;
+  }
+  .siteDescription__details dt {
+    flex-shrink: 0;
+  }
 }
 
 .siteDescription__details dt::after {
@@ -87,11 +105,30 @@
   margin-left: 1.5em;
 }
 
-.main > section,
-.main > article {
+.main > section {
   padding: 20px 5%;
   max-width: 40em;
   margin: 0 auto;
+}
+
+.main > #session {
+  background-color: #efefef;
+}
+
+@media (min-width: 48.4em) {
+  .main > #session {
+    padding: 20px calc((100% - 40em)/2);
+    margin: 0;
+  }
+}
+
+.main section > h2,
+.main section > h3,
+.main section > h4,
+.main section > h5,
+.main section > h6 {
+  margin: 60px 0 40px;
+  text-align: center;
 }
 
 #outline {
@@ -121,12 +158,16 @@
 }
 
 .Timetable {
-  margin-right: -5%;
+  table-layout: fixed;
   margin-left: -5%;
+  margin-right: -5%;
+  background-color: #fff;
+  border-collapse: collapse;
 }
 
 @media (min-width: 48.4em) {
   .Timetable {
+    transform: translateX(-3.25em);
     margin-right: calc((100vw - 44em) / -2.25);
     margin-left: calc((100vw - 44em) / -2.25);
   }
@@ -146,22 +187,28 @@
   font-weight: 300;
 }
 
-.Timetable td:not([colspan]) {
-  vertical-align: top;
+@media (min-width: 48.4em) {
+  .Timetable th,
+  .Timetable td {
+    padding: 8px 1em;
+  }
 }
 
-.Timetable td[colspan] {
-  text-align: center;
-}
 
 .Timetable th {
   background-color: #121212;
   color: #fff;
   text-align: center;
+  border: 1px solid #fff;
 }
 
-.Timetable th:not(:first-child) {
-  width: 45%;
+.Timetable th:first-child {
+  width: 3.5em;
+}
+
+.Timetable th:not(:first-child),
+.Timetable td:not([colspan]) {
+  width: calc((100% - 3.5em + 16px) / 2);
 }
 
 .Timetable th:only-of-type {
@@ -171,7 +218,18 @@
 @media (min-width: 48.4em) {
   .Timetable th:only-of-type {
     font-size: 1em;
+    background-color: #eaeaea;
+    color: #333;
+    font-weight: 600;
   }
+}
+
+.Timetable td:not([colspan]) {
+  vertical-align: top;
+}
+
+.Timetable td[colspan] {
+  text-align: center;
 }
 
 .Timetable__rest td {
@@ -249,6 +307,7 @@
   width: 48px;
   height: 48px;
   margin-right: 8px;
+  border-radius: 51%;
 }
 
 .Sponsors {
