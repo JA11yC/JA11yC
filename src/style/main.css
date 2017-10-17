@@ -4,60 +4,86 @@
 @import url(base.css);
 @import url(fonts.css);
 
-.site-header {
-  padding: 0 5% 40px;
-  background-color: #121212;
-  color: #fff;
-  text-align: center;
-}
-
-.site-header a {
-  color: inherit;
-}
-
-.site-header h1 {
-  display: inline-block;
-  margin: 120px 0 60px;
-  font-family: Card, sans-serif;
-  line-height: 1.1;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.site-header h1 a {
-  border: 0;
-}
-
-@media (min-width: 48.4em) {
-  .site-header h1 {
-    font-size: 7.5vw;
-  }
-}
-
-@media (min-width: 1280px) {
-  .site-header h1 {
-    font-size: 6rem;
-  }
-}
-
-.home-navigation {
+.siteHeader {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
   padding: 40px 5%;
   background-color: #121212;
   color: #fff;
   text-align: center;
 }
 
-.home-navigation a {
+@media (min-width: 48.4em) {
+  .siteHeader {
+    padding: 200px 10%;
+  }
+  .siteHeader h1 {
+    margin: 0 60px 0 0;
+  }
+}
+
+.siteHeader h1 a {
+  border: 0;
+}
+
+.siteDescription {
+  text-align: left;
+}
+
+.siteDescription > *:first-child {
+  margin-top: 0;
+}
+
+.siteDescription > *:last-child {
+  margin-bottom: 0;
+}
+
+.siteDescription__leed {
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+@media (min-width: 48.4em) {
+  .siteDescription__leed {
+    font-size: calc(28 / 16 * 1em);
+  }
+}
+
+.siteDescription__details {
+  margin-bottom: 36px;
+}
+
+.siteDescription__details > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.siteDescription__details dt::after {
+  content: "：";
+  margin: 0 0.25em;
+}
+
+.homeNavigation {
+  padding: 40px 5%;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+}
+
+.homeNavigation a {
   color: inherit;
 }
 
-.home-navigation ul {
+.homeNavigation ul {
   display: inline-flex;
   padding-left: 0;
   list-style: none;
 }
 
-.home-navigation li:not(:first-child) {
+.homeNavigation li:not(:first-child) {
   margin-left: 1.5em;
 }
 
@@ -78,13 +104,20 @@
 
 .callToAction {
   display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  border: 3px solid currentColor;
-  font-weight: 700;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 5em;
+  letter-spacing: 2px;
+  color: #121212;
+  background-color: #FFF;
+  font-weight: 600;
   font-feature-settings: "palt" 1;
-  font-size: 1.5em;
-  padding: 1em;
+  text-decoration: none;
+}
+
+.callToAction.-black {
+  color: #fff;
+  background-color: #121212;
 }
 
 .Timetable {
