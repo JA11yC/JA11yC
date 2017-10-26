@@ -7,50 +7,70 @@
   <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1><a href="./">Japan<br/>Accessibility<br/>Conference</a></h1>
-    <p>国内最大級のアクセシビリティ<wbr />カンファレンス</p>
-    <p>〜アクセシビリティのこれまでとこれから〜</p>
-    <p><time datetime="2017-11-11">2017年11月11日(土)</time> 13:00 - 18:00</p>
-    <p>LODGE, Yahoo! JAPAN<br>
-    （<a href="https://map.yahoo.co.jp/maps?bbox=139.73134799%2C35.67409495%2C139.74254799%2C35.68529495&id=827ba31f731188171e7ab4a74622daf8e13c5188&cond=ac%3A13101%3Bbounds%3A139.73134799%2C35.67409495%2C139.74254799%2C35.68529495%3Baz%3A35.1.3%3Bq%3A%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E7%B4%80%E5%B0%BE%E4%BA%95%E7%94%BA1-3%3Bplacegenre%3Aaddress%3Bid%3A827ba31f731188171e7ab4a74622daf8e13c5188%3B&p=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E7%B4%80%E5%B0%BE%E4%BA%95%E7%94%BA1-3&ac=13101&az=35.1.3&zoom=18&lat=35.679694949999984&lon=139.73694799&pluginid=pa&z=18&mode=map&active=true&layer=pa&home=on&hlat=35.679694949999984&hlon=139.73694799&pointer=off&pan=off&ei=utf8&v=3">東京ガーデンテラス紀尾井町</a>）
-    </p>
+  <header class="siteHeader">
+    <h1><img src="/images/logo.svg" alt="Japan Accessibility Conference" /></h1>
+    <div class="siteDescription">
+      <p class="siteDescription__leed">国内最大級の<span class="u-dib">アクセシビリティカンファレンス</span><br />〜アクセシビリティのこれまでとこれから〜</p>
+    </div>
   </header>
-  <main class="main">
-    <article>
+  <main class="main -session">
+    <article class="main__body">
       <h2>セッション/スピーカー一覧</h2>
-      <section class="Session" id="ux-in-science">
-        <h3 class="Session__title">基調講演 「UX as science」</h3>
+      <section class="Session -keynote" id="ux-in-science">
+        <h3 class="Session__title">
+          <span class="Session__id">基調講演</span>
+           UX as science
+        </h3>
         <div class="Session__detail">
-          <p class="Session__speaker">元Yahoo Korea CEO Kim Jinsoo</p>
-          <p>13:10 - 14:10 Room A・B</p>
+          <p class="Session__speaker">
+              <img class="Session__speakerPhoto -large" src="images/kim.jpg" alt="">
+              元Yahoo Korea CEO Kim Jinsoo
+          </p>
+          <p><a href="http://www.kipfa.or.kr/">http://www.kipfa.or.kr/</a></p>
+          <p>
+            <time class="Session__datetime" datetime="2017-11-11 13:10" class="Session__date">13:10 - 14:10</time>
+            <span class="Session__room">Room A・B</span></p>
         </div>
       </section>
       <section class="Session" id="inclusive-design-of-accessibility">
-        <h3 class="Session__title">アクセシビリティのインクルーシブデザイン</h3>
+        <h3 class="Session__title">
+          <span class="Session__id">A-1</span>
+          アクセシビリティのインクルーシブデザイン</h3>
         <div class="Session__detail">
-          <p class="Session__speaker">株式会社 SNC Lab 代表取締役 張善英(ジャンソンヨン)</p>
-          <p>14:30 - 15:10 Room A</p>
+          <p class="Session__speaker">
+              <img class="Session__speakerPhoto -large" src="images/jahng.jpg" alt="">
+              株式会社 SNC Lab 代表取締役 張善英(ジャンソンヨン)
+          </p>
+          <p><a href="http://www.snclab.kr/">http://www.snclab.kr/</a></p>
+          <p>
+            <time class="Session__datetime" datetime="2017-11-11 14:30" class="Session__date">14:30 - 15:10</time>
+            <span class="Session__room">Room A</span></p>
         </div>
       </section>
       <section class="Session" id="accessibility-coding">
-        <h3 class="Session__title">チームで取り組む！アクセシビリティコーディング</h3>
+        <h3 class="Session__title">
+          <span class="Session__id">B-1</span>
+          チームで取り組む！アクセシビリティコーディング</h3>
         <div class="Session__detail">
           <p>アクセシビリティに配慮したコーディングをチームで行う方法について、サイボウズ株式会社の開発を例にとって解説します。</p>
           <p>アクセシブルなHTMLやCSS,JavaScriptを書く方法をいくつか紹介した上でコーディングを個人ではなくチームで行なうための、啓蒙やルール作りについて、実例をもとにお話します。</p>
-          <p>14:30 - 15:10 Room B</p>
+          <p>
+            <time class="Session__datetime" datetime="2017-11-11 13:10" class="Session__date">14:30 - 15:10</time>
+            <span class="Session__room">Room B</span></p>
           <p class="Session__speaker">
-            <img class="Session__speakerPhoto" src="images/kobayashi.jpg" alt="">
+            <img class="Session__speakerPhoto -large" src="images/kobayashi.jpg" alt="">
             サイボウズ株式会社 小林大輔
           </p>
-          <ul>
+          <ul class="Session__speakerLink">
             <li><a href="https://cybozu.co.jp/efforts/accessibility/">アクセシビリティへの取り組み | サイボウズ株式会社</a></li>
           </ul>
           <p></p>
         </div>
       </section>
       <section class="Session" id="NVDA-introduction">
-        <h3 class="Session__title">アクセシビリティ検証ツールとしてのNVDA入門</h3>
+        <h3 class="Session__title">
+          <span class="Session__id">A-2</span>
+          アクセシビリティ検証ツールとしてのNVDA入門</h3>
         <div class="Session__detail">
           <p>視覚に障害があるユーザーがPCを使う上で不可欠なものがスクリーンリーダーです。無料で利用できる Windows 用スクリーンリーダー NVDA をご紹介します。</p>
           <ul>
@@ -59,12 +79,15 @@
             <li>アクセシビリティ検証ツールとして NVDA をどう使えばよいか</li>
           </ul>
           <p>をご説明します。</p>
-          <p>14:30 - 15:10 Room A</p>
+          <p>
+            <time class="Session__datetime" datetime="2017-11-11 15:20" class="Session__date">15:20 - 16:00</time>
+            <span class="Session__room">Room A</span></p>
+          </p>
           <p class="Session__speaker">
-            <img class="Session__speakerPhoto" src="images/nishimoto.jpg" alt="">
+            <img class="Session__speakerPhoto -large" src="images/nishimoto.jpg" alt="">
             NVDA日本語チーム 西本卓也
           </p>
-          <ul>
+          <ul class="Session__speakerLink">
             <li><a href="https://twitter.com/24motz/">@24motz</a></li>
             <li><a href="https://www.facebook.com/takuya.nishimoto">takuya.nishimoto</a></li>
             <li><a href="https://ja.nishimotz.com/">https://ja.nishimotz.com/</a></li>
@@ -73,55 +96,69 @@
         </div>
       </section>
       <section class="Session" id="wordpress-responsivility-accessibility">
-        <h3 class="Session__title">アクセシビリティに対する WordPress の責任について</h3>
+        <h3 class="Session__title">
+          <span class="Session__id">B-2</span>
+          アクセシビリティに対する WordPress の責任について</h3>
         <div class="Session__detail">
           <p>世界の主要ウェブサイトの25%以上を支える WordPress におけるアクセシビリティに対する取り組みについて、WordPress プラグイン開発者の視点からお話しします。</p>
-          <p>14:30 - 15:10 Room B</p>
+          <p>
+            <time class="Session__datetime" datetime="2017-11-11 15:20" class="Session__date">15:20 - 16:00</time>
+            <span class="Session__room">Room B</span>
+          </p>
           <p class="Session__speaker">
-            <img class="Session__speakerPhoto" src="images/miyoshi.jpg" alt="">
+            <img class="Session__speakerPhoto -large" src="images/miyoshi.jpg" alt="">
             合同会社ロックロブスター 三好隆之
           </p>
-          <ul>
+          <ul class="Session__speakerLink">
             <li><a href="https://ideasilo.wordpress.com/">iDeasilo</a></li>
           </ul>
           <p></p>
         </div>
       </section>
       <section class="Session" id="how-to-read-accessibility-guidelines">
-        <h3 class="Session__title">アクセシビリティ・ガイドラインの歩き方（初心者編）</h3>
+        <h3 class="Session__title">
+          <span class="Session__id">B-3</span>
+          アクセシビリティ・ガイドラインの歩き方（初心者編）</h3>
         <div class="Session__detail">
           <p>WCAG 2.0という言葉を一度は目にしたことがあるかもしれません。しかし、WCAG 2.0は難解な上に独特な文書構成をしているため、慣れない人は読むこと自体が困難な場合があります。</p>
           <p>そこで、このセッションでは、WCAG 2.0と周辺文書の関係、これらの読み方、取り巻く状況について、未読の方も念頭にしつつ、なるべく易しく解説することを目的とします。</p>
-          <p>16:20 - 17:00 Room B</p>
+          <p>
+            <time class="Session__datetime" datetime="2017-11-11 16:20" class="Session__date">16:20 - 17:00</time>
+            <span class="Session__room">Room B</span>
+          </p>
           <p class="Session__speaker">
-            <img class="Session__speakerPhoto" src="images/momdo.png" alt="">
+            <img class="Session__speakerPhoto -large" src="images/momdo.png" alt="">
             もんど（@momdo_）
           </p>
-          <ul>
+          <ul class="Session__speakerLink">
             <li><a href="https://github.com/momdo">GitHub momdo</a></li>
             <li><a href="https://twitter.com/momdo_">@momdo_</a></li>
           </ul>
-          <p></p>
         </div>
       </section>
       <section class="Session" id="extend-accessibility-in-media-service">
-        <h3 class="Session__title">メディア事業でのアクセシビリティ展開事例・CAではこうやってます</h3>
+        <h3 class="Session__title">
+          <span class="Session__id">B-4</span>
+          メディア事業でのアクセシビリティ展開事例・CAではこうやってます</h3>
         <div class="Session__detail">
           <p>アメーバブログやAbemaTV、FRESH!、新R25、Ameba Ownd などの多くのメディアを展開するサイバーエージェントで、事業ごと、また事業を超えてアクセシビリティを推進するための工夫を現場のエンジニアが泥臭い苦労を交えてお話します！</p>
-          <p>17:20 - 18:00 Room B</p>
+          <p>
+            <time class="Session__datetime" datetime="2017-11-11 17:20" class="Session__date">17:20 - 18:00</time>
+            <span class="Session__room">Room B</span>
+          </p>
           <p class="Session__speaker">
-            <img class="Session__speakerPhoto" src="images/masuda.jpg" alt="">
+            <img class="Session__speakerPhoto -large" src="images/masuda.jpg" alt="">
             株式会社サイバーエージェント 桝田草一
           </p>
-          <ul>
+          <ul class="Session__speakerLink">
             <li><a href="https://masup.net">masu<span>P</span>.net</a></li>
             <li><a href="https://twitter.com/masuP9">@masuP9</a></li>
           </ul>
           <p class="Session__speaker">
-            <img class="Session__speakerPhoto" src="images/tokimari.png" alt="">
+            <img class="Session__speakerPhoto -large" src="images/tokimari.png" alt="">
             株式会社サイバーエージェント 土岐真里奈
           </p>
-          <ul>
+          <ul class="Session__speakerLink">
             <li><a href="https://twitter.com/tokimariri">@tokimariri</a></li>
           </ul>
         </div>
