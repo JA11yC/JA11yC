@@ -101,8 +101,22 @@
   list-style: none;
 }
 
+.homeNavigation li {
+  font-size: calc(14 / 16 * 1em);
+  font-feature-settings: "palt" 1;
+}
+
 .homeNavigation li:not(:first-child) {
-  margin-left: 1.5em;
+  margin-left: 1.25em;
+}
+
+@media (min-width: 48.4em) {
+  .homeNavigation li {
+    font-size: 1em;
+  }
+  .homeNavigation li:not(:first-child) {
+    margin-left: 2em;
+  }
 }
 
 .main > section {
