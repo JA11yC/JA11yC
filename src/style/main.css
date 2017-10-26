@@ -136,11 +136,11 @@
   }
 }
 
-.main__body > h2,
-.main__body > h3,
-.main__body > h4,
-.main__body > h5,
-.main__body > h6 {
+.main__body h2,
+.main__body h3,
+.main__body h4,
+.main__body h5,
+.main__body h6 {
   margin: 60px 0 40px;
   text-align: center;
 }
@@ -261,6 +261,10 @@
   border-top: 3px solid #eaeaea;
 }
 
+.Session {
+  margin: 0;
+}
+
 .Session + .Session {
   margin-top: 90px;
 }
@@ -316,6 +320,7 @@
   margin-top: 8px;
 }
 
+.main.-session .Session__speaker,
 .Session.-keynote .Session__speaker {
   justify-content: center;
 }
@@ -336,6 +341,7 @@
 .Session__speakerLink {
   padding-left: 0;
   list-style: none;
+  text-align: center;
 }
 
 .Session__speakerLink > li {
