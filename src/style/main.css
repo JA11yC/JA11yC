@@ -410,7 +410,11 @@
   border: 0;
 }
 
-.site-footer {
+.LiveBroadCast > figure {
+  width: 100%;
+}
+
+.siteFooter {
   margin-top: 120px;
   padding: 40px 5% 40px;
   background-color: #121212;
