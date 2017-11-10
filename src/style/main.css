@@ -67,16 +67,10 @@
 
 .siteDescription__details > div {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
-
-@media (min-width: 64em) {
-  .siteDescription__details > div {
-    flex-wrap: nowrap;
-  }
-  .siteDescription__details dt {
-    flex-shrink: 0;
-  }
+.siteDescription__details dt {
+  flex-shrink: 0;
 }
 
 .siteDescription__details dt::after {
