@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" prefix="og: http://ogp.me/ns#" style="--light-deg: 120">
+<html lang="ja" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,22 +15,20 @@
   <meta property="og:image:secure_url" content="https://japan-a11y-conf.com/vol2/assets/ogimage.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Japan Accessibility Conference digital information">
-  <script>
-    function setSpotLightDeg () {
-      window.document.documentElement.setAttribute('style', `--light-deg: ${Math.floor(Math.random() * (360 + 1))}`);
-    };
-
-    setSpotLightDeg();
-  </script>
   <style>
   html {
     min-height: 100vh;
     background-color: white;
-    background-image: linear-gradient(135deg, white, white 20%, #ff5044 20%, #ff5044, 35%, white 35%);
-    background-image: linear-gradient(calc(var(--light-deg) * 1deg), white, white 20%, #ff5044 20%, #ff5044, 35%, white 35%);
+    background-image: linear-gradient(-72deg, white, white 15%, #ff5044 15%, #ff5044, 30%, white 30%);
     background-repeat: no-repeat;
     color: #121212;
     font-family: "Playfair", serif;
+  }
+
+  @media (min-width: 480px) {
+    html {
+      background-image: linear-gradient(-72deg, white, white 15%, #ff5044 15%, #ff5044, 22.5%, white 22.5%);
+    }
   }
 
   @media (min-width: 320px) {
