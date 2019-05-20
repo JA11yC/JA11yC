@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" prefix="og: http://ogp.me/ns#">
+<html lang="ja" prefix="og: http://ogp.me/ns#" style="--light-deg: 120">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +16,21 @@
   <meta property="og:image:secure_url" content="https://japan-a11y-conf.com/vol2/assets/ogimage.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Japan Accessibility Conference digital information">
+  <script>
+    function setSpotLightDeg () {
+      window.document.documentElement.setAttribute('style', `--light-deg: ${Math.floor(Math.random() * (360 + 1))}`);
+    };
+
+    setSpotLightDeg();
+  </script>
   <style>
   html {
-    background-color: #ff5044;
-    color: #231815;
+    min-height: 100vh;
+    background-color: white;
+    background-image: linear-gradient(135deg, white, white 20%, #ff5044 calc(20% + 1px), #ff5044, 35%, white calc(35% + 1px));
+    background-image: linear-gradient(calc(var(--light-deg) * 1deg), white, white 20%, #ff5044 calc(20% + 1px), #ff5044, 35%, white calc(35% + 1px));
+    background-repeat: no-repeat;
+    color: #121212;
     font-family: "Playfair", serif;
   }
 
@@ -39,9 +50,9 @@
   h1 {
     margin: 0 0 1em;
   }
+
   img {
     width: 100%;
-    max-width: 600px;
   }
 
   a {
@@ -54,9 +65,7 @@
   </style>
 </head>
 <body>
-  <h1>
-    <img src="./assets/logo.svg" alt="Japan Accessibility Conference digital information" />
-  </h1>
+  <h1><img src="./assets/logo.svg" alt="Japan Accessibility Conference"></h1>
   <div style="font-weight: bold">
     <time datetime="2019-07-20" style="font-size: 2.45em">2019.7.20</time>
     <p style="margin: 0">AbemaTowers, Shibuya</p>
