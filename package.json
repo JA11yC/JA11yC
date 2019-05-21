@@ -1,0 +1,25 @@
+{
+  "name": "ja11yc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "browser-sync start --server 'docs/' --files 'docs/'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JA11yC/JA11yC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JA11yC/JA11yC/issues"
+  },
+  "homepage": "https://github.com/JA11yC/JA11yC#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.5"
+  }
+}
