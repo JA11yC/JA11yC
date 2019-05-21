@@ -57,16 +57,29 @@
     text-underline-position: under;
   }
 
+  [itemprop="startDate"] {
+    font-size: calc(49 / 16 * 1rem);
+    font-weight: bold;
+    letter-spacing: calc(1 / 49 * -1em);
+  }
+
+  [itemprop="location"] {
+    font-weight: bold;
+    letter-spacing: calc(1 / 16 * 1em);
+  }
+
   footer {
     margin-top: 5em;
   }
   </style>
 </head>
-<body>
-  <h1><img src="./assets/logo.svg" alt="Japan Accessibility Conference digital information"></h1>
-  <div style="font-weight: bold">
-    <time datetime="2019-07-20" style="font-size: 2.45em">2019.7.20</time>
-    <p style="margin: 0">AbemaTowers, Shibuya</p>
+<body itemscope itemtype="http://schema.org/Event">
+  <h1 itemprop="name">
+    <img itemprop="image" src="./assets/logo.svg" alt="Japan Accessibility Conference digital information">
+  </h1>
+  <div>
+    <time itemprop="startDate" content="2019-07-20" datetime="2019-07-20">2019.7.20</time>
+    <p itemprop="location" style="margin: 0">Abema Towers, Shibuya</p>
   </div>
   <footer>
     <p><a href="../vol1/">vol.1</a></p>
