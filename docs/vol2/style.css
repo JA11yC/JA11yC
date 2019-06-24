@@ -1,9 +1,48 @@
 :root {
+  /* color */
   --color__text: #121212;
   --color__bg: #ffffff;
   --color__accent: #ff5044;
   --color__bgFooter: #f2f2f2;
   --color__border: #aaaaaa;
+  /* font-size */
+  --font-size__1: calc(14 / 16 * 1rem);
+  --font-size__2: calc(16 / 16 * 1rem);
+  --font-size__3: calc(18 / 16 * 1rem);
+  --font-size__4: calc(20 / 16 * 1rem);
+  --font-size__5: calc(24 / 16 * 1rem);
+  --font-size__6: calc(40 / 16 * 1rem);
+  /* font-family */
+  --font-family__sans-serif: "Helvetica", sans-serif;
+  --font-family__serif: "Playfair Display", "Times New Roman", serif;
+  /* margin */
+  --margin__1: 32px;
+  --margin__2: 40px;
+  --margin__3: 50px;
+  --margin__4: 60px;
+  --margin__5: 70px;
+  --margin__6: 100px;
+  --margin__body-side: 20px;
+}
+
+@media (min-width: 545px) {
+  :root {
+    /* font-size */
+    --font-size__1: calc(16 / 16 * 1rem);
+    --font-size__2: calc(18 / 16 * 1rem);
+    --font-size__3: calc(20 / 16 * 1rem);
+    --font-size__4: calc(24 / 16 * 1rem);
+    --font-size__5: calc(32 / 16 * 1rem);
+    --font-size__6: calc(56 / 16 * 1rem);
+    /* margin */
+    --margin__1: 40px;
+    --margin__2: 60px;
+    --margin__3: 80px;
+    --margin__4: 100px;
+    --margin__5: 120px;
+    --margin__6: 180px;
+    --margin__body-side: 32px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +54,7 @@
 
 html {
   color: var(--color__text);
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-family__sans-serif);
   line-height: 2;
 }
 
