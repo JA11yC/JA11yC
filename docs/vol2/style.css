@@ -1,17 +1,28 @@
 :root {
   /* color */
-  --color__text: #121212;
-  --color__bg: #ffffff;
-  --color__accent: #ff5044;
-  --color__bgFooter: #f2f2f2;
-  --color__border: #aaaaaa;
+  --color__black: #121212;
+  --color__white: #ffffff;
+  --color__orange: #ff5044;
+  --color__light-gray: #f2f2f2;
+  --color__gray: #aaaaaa;
+  --color__text: var(--color__black);
+  --color__bg: var(--color__white);
+  --color__accent: var(--color__orange);
+  --color__bgFooter: var(--color__light-gray);
+  --color__border: var(--color__gray);
   /* font-size */
-  --font-size__1: calc(14 / 16 * 1rem);
-  --font-size__2: calc(16 / 16 * 1rem);
-  --font-size__3: calc(18 / 16 * 1rem);
-  --font-size__4: calc(20 / 16 * 1rem);
-  --font-size__5: calc(24 / 16 * 1rem);
-  --font-size__6: calc(40 / 16 * 1rem);
+  --font-size__1-value: 14;
+  --font-size__2-value: 16;
+  --font-size__3-value: 18;
+  --font-size__4-value: 20;
+  --font-size__5-value: 24;
+  --font-size__6-value: 40;
+  --font-size__1: calc(var(--font-size__1-value) / 16 * 1rem);
+  --font-size__2: calc(var(--font-size__2-value) / 16 * 1rem);
+  --font-size__3: calc(var(--font-size__3-value) / 16 * 1rem);
+  --font-size__4: calc(var(--font-size__4-value) / 16 * 1rem);
+  --font-size__5: calc(var(--font-size__5-value) / 16 * 1rem);
+  --font-size__6: calc(var(--font-size__6-value) / 16 * 1rem);
   /* font-family */
   --font-family__sans-serif: "Helvetica", sans-serif;
   --font-family__serif: "Playfair Display", "Times New Roman", serif;
@@ -28,12 +39,12 @@
 @media (min-width: 545px) {
   :root {
     /* font-size */
-    --font-size__1: calc(16 / 16 * 1rem);
-    --font-size__2: calc(18 / 16 * 1rem);
-    --font-size__3: calc(20 / 16 * 1rem);
-    --font-size__4: calc(24 / 16 * 1rem);
-    --font-size__5: calc(32 / 16 * 1rem);
-    --font-size__6: calc(56 / 16 * 1rem);
+    --font-size__1-value: 16;
+    --font-size__2-value: 18;
+    --font-size__3-value: 20;
+    --font-size__4-value: 24;
+    --font-size__5-value: 32;
+    --font-size__6-value: 56;
     /* margin */
     --margin__1: 40px;
     --margin__2: 60px;
@@ -47,8 +58,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color__text: #fff;
-    --color__bg: #121212;
+    --color__text: var(--color__white);
+    --color__bg: var(--color__black);
   }
 }
 
@@ -57,6 +68,7 @@
 html {
   color: var(--color__text);
   font-family: var(--font-family__sans-serif);
+  font-size: var(--font-size__1);
   line-height: 2;
 }
 
@@ -67,6 +79,11 @@ body {
 a {
   color: inherit;
   text-underline-position: under;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
 }
 
 h1 > svg {
@@ -87,40 +104,90 @@ h6,
   line-height: 1.5;
 }
 
+/* Class */
+.Ticket {
+  position: relative;
+  display: inline-block;
+  padding: 16px calc(96 / var(--font-size__5-value) * 1em) 16px 16px;
+  background-color: var(--color__text);
+  box-shadow: 0 0 0 var(--color__accent);
+  color: var(--color__bg);
+  font-size: var(--font-size__5);
+  font-feature-settings: "palt" 1;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: box-shadow 0.1s ease-in;
+  -webkit-font-smoothing: antialiased;
+}
+
+.Ticket::after {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  content: "";
+  display: inline-block;
+  margin: auto 0 auto 2px;
+  border-color: transparent;
+  border-left-color: var(--color__bg);
+  border-style: solid;
+  border-width: 4px 12px;
+}
+
+.Ticket:hover {
+  box-shadow: 5px 5px 0 var(--color__accent);
+}
+
+.Ticket .ticket-service {
+  font-size: var(--font-size__2);
+  font-weight: normal;
+  font-feature-settings: none;
+  letter-spacing: 0;
+  -webkit-font-smoothing: auto;
+}
+
+.LatinOnlyLink {
+  text-underline-position: auto;
+}
+
 /* Layout */
 #Wrapper {
   padding: var(--margin__body-side) var(--margin__body-side) 0;
 }
 
-nav {
+#Nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: -12px 0;
 }
 
-nav [role="directory"] {
+#Nav [role="directory"] {
   display: contents;
   list-style: none;
 }
 
-nav a {
+#Nav a {
   padding: 3px;
 }
 
-nav > div,
-nav [role="directory"] > li {
+#Nav > div,
+#Nav [role="directory"] > li {
   display: inline-block;
   padding: 9px;
   line-height: 1;
 }
 
-[role="directory"] a[href^="#"] {
+#Nav [role="directory"] a[href^="#"] {
   display: inline-flex;
   align-items: center;
 }
 
-[role="directory"] a[href^="#"]::after {
+#Nav [role="directory"] a[href^="#"]::after {
   content: "";
   display: inline-block;
   margin-left: 2px;
@@ -133,9 +200,106 @@ nav [role="directory"] > li {
 
 #Cover {
   margin-top: var(--margin__3);
-  font-family: var(--font-family__serif);
 }
 
 h1 {
   margin: 0 0 var(--margin__2);
+}
+
+#Cover .event-detail {
+  font-family: var(--font-family__serif);
+  font-weight: bold;
+  line-height: 1;
+}
+
+#Cover .event-detail .date {
+  font-size: var(--font-size__6);
+}
+
+#Cover .event-detail .day-of-week {
+  font-size: var(--font-size__4);
+}
+
+#Cover .event-detail .duration {
+  display: inline-block;
+  margin-left: 0.25em;
+  font-size: var(--font-size__4);
+}
+
+#Cover .location {
+  margin: 1em 0 0;
+  font-size: var(--font-size__4);
+}
+
+#Cover .twitter {
+  margin: 0;
+}
+
+#Cover .twitter dt {
+  float: left;
+  margin-right: 4px;
+}
+
+#Cover .twitter dt::after {
+  content: ":";
+}
+
+#Message {
+  padding: var(--margin__4) 2em;
+  box-shadow: 0 10px 20px rgba(255, 50, 44, 0.2);
+}
+
+#Message h2 {
+  margin: 0 0 var(--margin__3);
+  font-size: var(--font-size__5);
+  text-align: center;
+}
+
+#Message h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  margin: 32px auto 0;
+  background-color: var(--color__accent);
+}
+
+#Message aside h3 {
+  margin-top: var(--margin__2);
+  font-size: var(--font-size__1);
+}
+
+.HeadingwithEn {
+  text-align: center;
+}
+
+.HeadingwithEn [lang="en"] {
+  display: block;
+  font-family: var(--font-family__serif);
+  font-size: var(--font-size__6);
+}
+
+/* util style */
+.u-mb__1 {
+  margin-bottom: var(--margin__1);
+}
+
+.u-mb__2 {
+  margin-bottom: var(--margin__2);
+}
+
+.u-mb__3 {
+  margin-bottom: var(--margin__3);
+}
+
+.u-mb__4 {
+  margin-bottom: var(--margin__4);
+}
+
+.u-mb__5 {
+  margin-bottom: var(--margin__5);
+}
+
+.u-mb__6 {
+  margin-bottom: var(--margin__6);
 }
