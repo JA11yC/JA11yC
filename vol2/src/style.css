@@ -625,6 +625,7 @@ ul {
   max-width: 640px;
   margin-right: auto;
   margin-left: auto;
+  padding: 0 20px;
 }
 
 #Footer {
