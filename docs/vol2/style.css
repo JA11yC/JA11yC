@@ -75,23 +75,6 @@ html {
 
 body {
   margin: 0;
-  background-image: linear-gradient(-60deg,
-                                    var(--color__bg),
-                                    var(--color__bg) 89%,
-                                    var(--color__accent) 89%,
-                                    var(--color__accent), 91%,
-                                    var(--color__bg) 91%)
-}
-
-@media (min-width: 545px) {
-  body {
-    background-image: linear-gradient(-60deg,
-                                      var(--color__bg),
-                                      var(--color__bg) 80%,
-                                      var(--color__accent) 80%,
-                                      var(--color__accent), 84%,
-                                      var(--color__bg) 84%)
-  }
 }
 
 a {
@@ -233,6 +216,30 @@ ul {
 .visuallyHidden {
   position: absolute;
   opacity: 0;
+}
+
+#SpotLight {
+  position: absolute;
+  width: 100%;
+  padding-bottom: 2000px;
+  background-image: linear-gradient(-60deg,
+                                    var(--color__bg),
+                                    var(--color__bg) 47.5%,
+                                    var(--color__accent) 47.5%,
+                                    var(--color__accent), 60%,
+                                    var(--color__bg) 60%);
+}
+
+@media (min-width: 545px) {
+  #SpotLight {
+    padding-bottom: 4000px;
+    background-image: linear-gradient(-60deg,
+    var(--color__bg),
+    var(--color__bg) 57.5%,
+    var(--color__accent) 57.5%,
+    var(--color__accent), 65%,
+    var(--color__bg) 65%);
+  }
 }
 
 /* Layout */
