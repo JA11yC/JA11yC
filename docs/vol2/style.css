@@ -75,6 +75,23 @@ html {
 
 body {
   margin: 0;
+  background-image: linear-gradient(-60deg,
+                                    var(--color__bg),
+                                    var(--color__bg) 89%,
+                                    var(--color__accent) 89%,
+                                    var(--color__accent), 91%,
+                                    var(--color__bg) 91%)
+}
+
+@media (min-width: 545px) {
+  body {
+    background-image: linear-gradient(-60deg,
+                                      var(--color__bg),
+                                      var(--color__bg) 80%,
+                                      var(--color__accent) 80%,
+                                      var(--color__accent), 84%,
+                                      var(--color__bg) 84%)
+  }
 }
 
 a {
@@ -127,11 +144,13 @@ ul {
   box-shadow: 0 0 0 var(--color__accent);
   color: var(--color__bg);
   font-size: var(--font-size__5);
-  font-feature-settings: "palt" 1;
+  -webkit-font-feature-settings: "palt" 1;
+          font-feature-settings: "palt" 1;
   font-weight: bold;
   line-height: 1;
   letter-spacing: 2px;
   text-decoration: none;
+  -webkit-transition: box-shadow 0.1s ease-in;
   transition: box-shadow 0.1s ease-in;
   -webkit-font-smoothing: antialiased;
 }
@@ -159,7 +178,8 @@ ul {
 .Ticket .ticket-service {
   font-size: var(--font-size__2);
   font-weight: normal;
-  font-feature-settings: none;
+  -webkit-font-feature-settings: none;
+          font-feature-settings: none;
   letter-spacing: 0;
   -webkit-font-smoothing: auto;
 }
@@ -185,7 +205,8 @@ ul {
   border: 1px solid currentColor;
   background-color: var(--color__bg);
   color: var(--color__text);
-  font-feature-settings: "palt" 1;
+  -webkit-font-feature-settings: "palt" 1;
+          font-feature-settings: "palt" 1;
   font-weight: bold;
   line-height: 1;
   letter-spacing: 2px;
@@ -216,10 +237,34 @@ ul {
 
 /* Layout */
 #Content {
+  position: relative;
   max-width: 1000px;
   margin: 0 auto;
   padding: var(--margin__body-side) var(--margin__body-side) 0;
 }
+
+/* #Content::before {
+  content: "";
+  display: block;
+  width: 150px;
+  background-color: var(--color__accent);
+  height: 10000px;
+  position: absolute;
+  z-index: -1;
+  right: -320px;
+  transform: rotate(30deg);
+  transform-origin: 100% 0;
+  top: 0;
+}
+
+@media (min-width: 545px) {
+  #Content::before {
+    width: 260px;
+    right: -320px;
+    transform: rotate(30deg);
+    transform-origin: 100% 0;
+    }
+} */
 
 #Content hr {
   border: 1px solid #dedede;
@@ -227,9 +272,11 @@ ul {
 }
 
 #Nav {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   margin: -12px 0;
 }
 
@@ -250,8 +297,10 @@ ul {
 }
 
 #Nav [role="directory"] a[href^="#"] {
+  display: -webkit-inline-box;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 #Nav [role="directory"] a[href^="#"]::after {
@@ -262,7 +311,8 @@ ul {
   border-top-color: var(--color__text);
   border-style: solid;
   border-width: 6px 4px;
-  transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 #Cover {
@@ -318,6 +368,7 @@ ul {
 
 #Message {
   padding: var(--margin__4) 2em;
+  background-color: var(--color__bg);
   box-shadow: 0 10px 20px rgba(255, 50, 44, 0.2);
 }
 
@@ -390,12 +441,14 @@ ul {
 #Speakers .speakers-list img {
   display: block;
   width: 100%;
-  filter: grayscale(100);
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
 }
 
 #Speakers .speakers-list a:hover img,
 #Speakers .speakers-list a:focus img {
-  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 #Speakers .speakers-list .dummy-image {
@@ -404,8 +457,10 @@ ul {
 }
 
 #Speakers .speakers-list [itemprop="name"] {
+  display: -webkit-box;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   margin: 20px 0 1em;
   font-size: var(--font-size__2);
   line-height: 1;
@@ -427,8 +482,10 @@ ul {
 
 @media (min-width: 545px) {
   #Speakers .speakers-list {
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     flex-wrap: wrap;
   }
 
@@ -452,6 +509,7 @@ ul {
 }
 
 #Information .information-list > div {
+  display: -webkit-box;
   display: flex;
   padding: 20px 0;
   border-top: 1px solid var(--color__border);
@@ -507,9 +565,11 @@ ul {
 }
 
 .SponsorsList {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   padding-left: 0;
   list-style: none;
 }
@@ -532,15 +592,19 @@ ul {
 }
 
 .SponsorsList a {
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   height: 80px;
   width: 220px;
 }
 
 .SponsorsList img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   max-height: 80px;
 }
 
@@ -595,9 +659,12 @@ ul {
 #Footer ul {
   list-style: none;
   padding-left: 0;
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 #Footer li:not(:last-child) {

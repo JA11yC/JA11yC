@@ -75,6 +75,23 @@ html {
 
 body {
   margin: 0;
+  background-image: linear-gradient(-60deg,
+                                    var(--color__bg),
+                                    var(--color__bg) 89%,
+                                    var(--color__accent) 89%,
+                                    var(--color__accent), 91%,
+                                    var(--color__bg) 91%)
+}
+
+@media (min-width: 545px) {
+  body {
+    background-image: linear-gradient(-60deg,
+                                      var(--color__bg),
+                                      var(--color__bg) 80%,
+                                      var(--color__accent) 80%,
+                                      var(--color__accent), 84%,
+                                      var(--color__bg) 84%)
+  }
 }
 
 a {
@@ -216,10 +233,34 @@ ul {
 
 /* Layout */
 #Content {
+  position: relative;
   max-width: 1000px;
   margin: 0 auto;
   padding: var(--margin__body-side) var(--margin__body-side) 0;
 }
+
+/* #Content::before {
+  content: "";
+  display: block;
+  width: 150px;
+  background-color: var(--color__accent);
+  height: 10000px;
+  position: absolute;
+  z-index: -1;
+  right: -320px;
+  transform: rotate(30deg);
+  transform-origin: 100% 0;
+  top: 0;
+}
+
+@media (min-width: 545px) {
+  #Content::before {
+    width: 260px;
+    right: -320px;
+    transform: rotate(30deg);
+    transform-origin: 100% 0;
+    }
+} */
 
 #Content hr {
   border: 1px solid #dedede;
@@ -318,6 +359,7 @@ ul {
 
 #Message {
   padding: var(--margin__4) 2em;
+  background-color: var(--color__bg);
   box-shadow: 0 10px 20px rgba(255, 50, 44, 0.2);
 }
 
