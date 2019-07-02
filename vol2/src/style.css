@@ -625,9 +625,14 @@ ul {
 
 .SponsorsList img {
   object-fit: contain;
-  height: auto; /* for can't use object-fit */
-  max-width: 220px; /* for can't use object-fit */
   max-height: 80px;
+}
+
+@media (min-width: 545px) {
+  .SponsorsList img {
+    height: auto; /* for can't use object-fit */
+    max-width: 220px; /* for can't use object-fit */
+  }
 }
 
 #RecruitSponsors {
