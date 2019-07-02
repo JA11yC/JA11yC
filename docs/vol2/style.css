@@ -722,6 +722,8 @@ serif;
 .SponsorsList img {
   -o-object-fit: contain;
      object-fit: contain;
+  height: auto; /* for can't use object-fit */
+  max-width: 220px; /* for can't use object-fit */
   max-height: 80px;
 }
 
