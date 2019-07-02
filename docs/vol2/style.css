@@ -72,9 +72,15 @@
 /* element style */
 
 html {
+  background-color: #ffffff;
   background-color: var(--color__bg);
+  color: #121212;
   color: var(--color__text);
+  font-family: "Helvetica"
+,
+sans-serif;
   font-family: var(--font-family__sans-serif);
+  font-size: calc(14 / 16 * 1em);
   font-size: calc(var(--font-size__1-value) / 16 * 1em);
   line-height: 2;
 }
@@ -93,6 +99,7 @@ a:hover {
 }
 
 *:focus {
+  outline: 3px solid #ff5044;
   outline: 3px solid var(--color__accent);
   outline-offset: 2px;
 }
@@ -128,6 +135,7 @@ ul {
 .Logo {
   max-width: 180px;
   display: block;
+  fill: #121212;
   fill: var(--color__text);
 }
 
@@ -144,10 +152,15 @@ ul {
 .Ticket {
   position: relative;
   display: inline-block;
+  padding: 16px calc(96 / 24 * 1em) 16px 16px;
   padding: 16px calc(96 / var(--font-size__5-value) * 1em) 16px 16px;
+  background-color: #121212;
   background-color: var(--color__text);
+  box-shadow: 0 0 0 #ff5044;
   box-shadow: 0 0 0 var(--color__accent);
+  color: #ffffff;
   color: var(--color__bg);
+  font-size: calc(24 / 14 * 1rem);
   font-size: var(--font-size__5);
   -webkit-font-feature-settings: "palt" 1;
           font-feature-settings: "palt" 1;
@@ -171,16 +184,19 @@ ul {
   display: inline-block;
   margin: auto 0 auto 2px;
   border-color: transparent;
+  border-left-color: #ffffff;
   border-left-color: var(--color__bg);
   border-style: solid;
   border-width: 4px 12px;
 }
 
 .Ticket:hover {
+  box-shadow: 5px 5px 0 #ff5044;
   box-shadow: 5px 5px 0 var(--color__accent);
 }
 
 .Ticket .ticket-service {
+  font-size: calc(16 / 14 * 1rem);
   font-size: var(--font-size__2);
   font-weight: normal;
   -webkit-font-feature-settings: none;
@@ -195,21 +211,31 @@ ul {
 
 .HeadingwithEn {
   text-align: center;
+  font-size: calc(16 / 14 * 1rem);
   font-size: var(--font-size__2);
 }
 
 .HeadingwithEn [lang="en"] {
   display: block;
+  font-family: "Playfair Display"
+,
+"Times New Roman"
+,
+serif;
   font-family: var(--font-family__serif);
+  font-size: calc(40 / 14 * 1rem);
   font-size: var(--font-size__6);
 }
 
 .LinkButton {
   position: relative;
   display: inline-block;
+  padding: 16px calc(76 / 14 * 1rem) 16px 16px;
   padding: 16px calc(76 / var(--font-size__1-value) * 1rem) 16px 16px;
   border: 1px solid currentColor;
+  background-color: #ffffff;
   background-color: var(--color__bg);
+  color: #121212;
   color: var(--color__text);
   -webkit-font-feature-settings: "palt" 1;
           font-feature-settings: "palt" 1;
@@ -231,6 +257,7 @@ ul {
   display: inline-block;
   margin: auto 0 auto 2px;
   border-color: transparent;
+  border-left-color: #121212;
   border-left-color: var(--color__text);
   border-style: solid;
   border-width: 4px 12px;
@@ -282,6 +309,12 @@ ul {
   width: 100%;
   padding-bottom: 2000px;
   background-image: linear-gradient(-60deg,
+                                    #ffffff,
+                                    #ffffff 47.5%,
+                                    #ff5044 47.5%,
+                                    #ff5044, 60%,
+                                    #ffffff 60%);
+  background-image: linear-gradient(-60deg,
                                     var(--color__bg),
                                     var(--color__bg) 47.5%,
                                     var(--color__accent) 47.5%,
@@ -293,6 +326,12 @@ ul {
   #SpotLight {
     padding-bottom: 4000px;
     background-image: linear-gradient(-60deg,
+    #ffffff,
+    #ffffff 57.5%,
+    #ff5044 57.5%,
+    #ff5044, 65%,
+    #ffffff 65%);
+    background-image: linear-gradient(-60deg,
     var(--color__bg),
     var(--color__bg) 57.5%,
     var(--color__accent) 57.5%,
@@ -303,6 +342,12 @@ ul {
 
 #Session #SpotLight {
   padding-bottom: 350px;
+  background-image: linear-gradient(-60deg,
+  #ffffff,
+  #ffffff 20%,
+  #ff5044 20%,
+  #ff5044, 30%,
+  #ffffff 30%);
   background-image: linear-gradient(-60deg,
   var(--color__bg),
   var(--color__bg) 20%,
@@ -316,11 +361,13 @@ ul {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 20px 20px 0;
   padding: var(--margin__body-side) var(--margin__body-side) 0;
 }
 
 #Content hr {
   border: 1px solid #dedede;
+  margin: 70px calc(20px * -1);
   margin: var(--margin__5) calc(var(--margin__body-side) * -1);
 }
 
@@ -330,6 +377,7 @@ ul {
   flex-wrap: wrap;
   -webkit-box-pack: center;
           justify-content: center;
+  margin: -12px 0 calc(50px - 12px);
   margin: -12px 0 calc(var(--margin__3) - 12px);
 }
 
@@ -369,6 +417,7 @@ ul {
   display: inline-block;
   margin-left: 2px;
   border-color: transparent;
+  border-top-color: #121212;
   border-top-color: var(--color__text);
   border-style: solid;
   border-width: 6px 4px;
@@ -377,6 +426,7 @@ ul {
 }
 
 #Cover [itemprop="name"] {
+  margin: 0 0 40px;
   margin: 0 0 var(--margin__2);
 }
 
@@ -385,38 +435,51 @@ ul {
 }
 
 #Cover .event-detail {
+  font-family: "Playfair Display"
+,
+"Times New Roman"
+,
+serif;
   font-family: var(--font-family__serif);
   font-weight: bold;
   line-height: 1;
 }
 
 #Cover .event-detail .date {
+  font-size: calc(40 / 14 * 1rem);
   font-size: var(--font-size__6);
 }
 
 #Cover .event-detail .day-of-week {
+  font-size: calc(20 / 14 * 1rem);
   font-size: var(--font-size__4);
 }
 
 #Cover .event-detail .duration {
   display: inline-block;
   margin-left: 0.25em;
+  font-size: calc(20 / 14 * 1rem);
   font-size: var(--font-size__4);
 }
 
 #Cover .location {
   margin: 1em 0 0;
+  font-size: calc(20 / 14 * 1rem);
   font-size: var(--font-size__4);
 }
 
 #Message {
+  padding: 60px 2em;
   padding: var(--margin__4) 2em;
+  background-color: #ffffff;
   background-color: var(--color__bg);
   box-shadow: 0 10px 20px rgba(255, 50, 44, 0.2);
 }
 
 #Message h2 {
+  margin: 0 0 50px;
   margin: 0 0 var(--margin__3);
+  font-size: calc(24 / 14 * 1rem);
   font-size: var(--font-size__5);
   text-align: center;
 }
@@ -427,6 +490,7 @@ ul {
   height: 3px;
   width: 60px;
   margin: 32px auto 0;
+  background-color: #ff5044;
   background-color: var(--color__accent);
 }
 
@@ -436,11 +500,14 @@ ul {
 }
 
 #Message aside h3 {
+  margin-top: 40px;
   margin-top: var(--margin__2);
+  font-size: calc(14 / 14 * 1rem);
   font-size: var(--font-size__1);
 }
 
 #Speakers h2 {
+  margin-bottom: 50px;
   margin-bottom: var(--margin__3);
 }
 
@@ -454,6 +521,7 @@ ul {
 #Speakers .speakers-list li {
   position: relative;
   padding: 0 10px;
+  margin-bottom: 32px;
   margin-bottom: var(--margin__1);
   line-height: 1.5;
 }
@@ -476,6 +544,7 @@ ul {
 }
 
 #Speakers .speakers-list a:focus::after {
+  outline: 3px solid #ff5044;
   outline: 3px solid var(--color__accent);
   outline-offset: 2px;
 }
@@ -496,6 +565,7 @@ ul {
 
 #Speakers .speakers-list .dummy-image {
   padding-bottom: 100%;
+  background-color: #aaaaaa;
   background-color: var(--color__gray);
 }
 
@@ -505,6 +575,7 @@ ul {
   -webkit-box-align: center;
           align-items: center;
   margin: 20px 0 1em;
+  font-size: calc(16 / 14 * 1rem);
   font-size: var(--font-size__2);
   line-height: 1;
 }
@@ -516,10 +587,12 @@ ul {
   height: 10px;
   margin-right: 8px;
   border-radius: 50%;
+  background-color: #ff5044;
   background-color: var(--color__accent);
 }
 
 #Speakers .speakers-list [itemprop="jobTitle"] {
+  font-size: calc(14 / 14 * 1rem);
   font-size: calc(14 / var(--font-size__1-value) * 1rem);
 }
 
@@ -544,6 +617,7 @@ ul {
 }
 
 #Information h2 {
+  margin-bottom: 50px;
   margin-bottom: var(--margin__3);
 }
 
@@ -555,10 +629,12 @@ ul {
   display: -webkit-box;
   display: flex;
   padding: 20px 0;
+  border-top: 1px solid #aaaaaa;
   border-top: 1px solid var(--color__border);
 }
 
 #Information .information-list > div:last-child {
+  border-bottom: 1px solid #aaaaaa;
   border-bottom: 1px solid var(--color__border);
 }
 
@@ -573,11 +649,14 @@ ul {
 }
 
 #Information h4 {
+  margin: 40px 0 32px;
   margin: var(--margin__2) 0 var(--margin__1);
 }
 
 #AccessibilityOfEvent h3 {
+  margin: 0 0 50px;
   margin: 0 0 var(--margin__3);
+  font-size: calc(18 / 14 * 1rem);
   font-size: var(--font-size__3);
   text-align: center;
 }
@@ -588,6 +667,7 @@ ul {
   height: 3px;
   width: 60px;
   margin: 20px auto 0;
+  background-color: #ff5044;
   background-color: var(--color__accent);
 }
 
@@ -598,11 +678,14 @@ ul {
 }
 
 #Sponsors h2 {
+  margin-bottom: 50px;
   margin-bottom: var(--margin__3);
 }
 
 #Sponsors h3 {
+  margin-top: 60px;
   margin-top: var(--margin__4);
+  font-size: calc(18 / 14 * 1rem);
   font-size: var(--font-size__3);
   text-align: center;
 }
@@ -671,6 +754,7 @@ ul {
 
 #OtherInformation {
   padding: 100px 0;
+  background-color: #f2f2f2;
   background-color: var(--color__bgFooter);
 }
 
@@ -685,9 +769,13 @@ ul {
 /* Sessions */
 #Sessions {
   max-width: 640px;
+  margin-right: calc(20px * -1);
   margin-right: calc(var(--margin__body-side) * -1);
+  margin-left: calc(20px * -1);
   margin-left: calc(var(--margin__body-side) * -1);
+  padding: 100px 20px 0;
   padding: 100px var(--margin__body-side) 0;
+  background-color: #ffffff;
   background-color: var(--color__bg);
 }
 
@@ -696,13 +784,16 @@ ul {
     box-sizing: border-box;
     margin-right: auto;
     margin-left: auto;
+    padding-right: 20px;
     padding-right: var(--margin__body-side);
+    padding-left: 20px;
     padding-left: var(--margin__body-side);
     background-color: transparent;
   }
 }
 
 #Sessions .HeadingwithEn {
+  margin-bottom: 50px;
   margin-bottom: var(--margin__3);
 }
 
@@ -711,10 +802,12 @@ ul {
 }
 
 #Sessions [itemprop="subEvent"] footer {
+  font-size: calc(14 / 14 * 1rem);
   font-size: var(--font-size__1);
 }
 
 #Sessions [itemprop="subEvent"] [itemprop="identifier"] {
+  font-size: calc(16 / 14 * 1rem);
   font-size: var(--font-size__2);
 }
 
@@ -725,12 +818,15 @@ ul {
   height: 10px;
   margin-right: 8px;
   border-radius: 50%;
+  background-color: #ff5044;
   background-color: var(--color__accent);
 }
 
 #Sessions [itemprop="subEvent"] h3[itemprop="name"] {
   padding-bottom: 16px;
+  border-bottom: 2px solid #aaaaaa;
   border-bottom: 2px solid var(--color__border);
+  font-size: calc(20 / 14 * 1rem);
   font-size: var(--font-size__4);
 }
 
@@ -749,16 +845,20 @@ ul {
   display: block;
   margin: 20px 0 12px;
   line-height: 1;
+  font-size: calc(16 / 14 * 1rem);
   font-size: var(--font-size__2);
 }
 
 #Sessions [itemprop="performer"] {
+  margin-top: 32px;
   margin-top: var(--margin__1);
 }
 
 #Footer {
   padding: 40px;
+  background-color: #121212;
   background-color: var(--color__black);
+  color: #ffffff;
   color: var(--color__white);
   text-align: center;
 }
@@ -780,25 +880,31 @@ ul {
 
 /* util style */
 .u-mb__1 {
+  margin-bottom: 32px !important;
   margin-bottom: var(--margin__1) !important;
 }
 
 .u-mb__2 {
+  margin-bottom: 40px !important;
   margin-bottom: var(--margin__2) !important;
 }
 
 .u-mb__3 {
+  margin-bottom: 50px !important;
   margin-bottom: var(--margin__3) !important;
 }
 
 .u-mb__4 {
+  margin-bottom: 60px !important;
   margin-bottom: var(--margin__4) !important;
 }
 
 .u-mb__5 {
+  margin-bottom: 70px !important;
   margin-bottom: var(--margin__5) !important;
 }
 
 .u-mb__6 {
+  margin-bottom: 100px !important;
   margin-bottom: var(--margin__6) !important;
 }

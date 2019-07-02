@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "postcss vol2/src/style.css --no-map -u autoprefixer -o docs/vol2/style.css",
+    "build": "postcss vol2/src/style.css --no-map -u autoprefixer -u postcss-custom-properties -o docs/vol2/style.css",
     "server": "browser-sync start --server 'docs/' --files 'docs/'",
     "start": "npm run server & npm run build -- -w"
   },
@@ -24,6 +24,7 @@
   "devDependencies": {
     "autoprefixer": "^9.6.0",
     "browser-sync": "^2.26.7",
-    "postcss-cli": "^6.1.2"
+    "postcss-cli": "^6.1.2",
+    "postcss-custom-properties": "^9.0.1"
   }
 }
