@@ -21,13 +21,13 @@
   <div id="SpotLight"></div>
   <div id="Content">
     <nav id="Nav">
-      <ul role="directory">
+      <ul>
         <li><a href="/vol2/#Message">開催によせて</a></li>
         <li><a href="/vol2/#Speakers">登壇者</a></li>
         <li><a href="/vol2/#Information">開催情報</a></li>
         <li><a href="/vol2/#Sponsors">スポンサー</a></li>
+        <li><a href="#Sessions">セッション一覧</a></li>
       </ul>
-      <div><a href="#Sessions">セッション一覧</a></div>
     </nav>
     <div>
       <a href="/vol2/" itemprop="name">
@@ -358,24 +358,5 @@
     <p><a href="/vol1/">JAC vol.1</a></p>
     <p><small>© 2017 Japan Accessibility Conference - digital information</small></p>
   </footer>
-  <script>
-    (function(){
-      function handleClickHashAnchor(e) {
-        var target = document.getElementById(e.currentTarget.hash.slice(1));
-        if (target != null) {
-          if (target.getAttribute('tabindex') == null) {
-            target.setAttribute('tabindex', '-1');
-          }
-
-          target.focus();
-        }
-      };
-
-      var hashAnchorElements = document.querySelectorAll('[href^="#"]');
-        hashAnchorElements.forEach(function(a) {
-          a.addEventListener('click', handleClickHashAnchor);
-      });
-    })();
-  </script>
 </body>
 </html>
