@@ -610,6 +610,13 @@ ul {
   }
 }
 
+@media (min-width: 1024px) {
+  .SponsorsList.-bronze {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .SponsorsList li {
   padding: 0 10px;
   margin-bottom: 20px;
