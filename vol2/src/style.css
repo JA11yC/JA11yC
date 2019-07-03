@@ -39,12 +39,14 @@
 @media (min-width: 545px) {
   :root {
     /* font-size */
+    --font-size__0-value: 14;
     --font-size__1-value: 16;
     --font-size__2-value: 18;
     --font-size__3-value: 20;
     --font-size__4-value: 24;
     --font-size__5-value: 32;
     --font-size__6-value: 56;
+    --font-size__0: calc(var(--font-size__0-value) / 16 * 1rem);
     --font-size__1: calc(var(--font-size__1-value) / 16 * 1rem);
     --font-size__2: calc(var(--font-size__2-value) / 16 * 1rem);
     --font-size__3: calc(var(--font-size__3-value) / 16 * 1rem);
@@ -521,6 +523,148 @@ ul {
   }
 }
 
+#TimeTable .HeadingwithEn {
+  margin-bottom: var(--margin__3);
+}
+
+.TimeTable {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.TimeTable thead {
+  background-color: var(--color__black);
+  color: var(--color__white);
+}
+
+.TimeTable thead th {
+  padding: 10px;
+  border: 1px solid var(--color__white);
+}
+
+.TimeTable thead th:first-child {
+  width: calc(2em + 20px)
+}
+
+.TimeTable .rest,
+.TimeTable .transform {
+  background-color: var(--color__light-gray);
+  color: var(--color__black);
+}
+
+.TimeTable tr + .greeting {
+  border-top: 1px solid var(--color__border);
+}
+
+.TimeTable .rest td[colspan],
+.TimeTable .greeting td[colspan],
+.TimeTable .transform td[colspan] {
+  text-align: center;
+}
+
+.TimeTable tbody th span {
+  margin: 0 4px;
+  font-weight: normal;
+}
+
+@media (min-width: 545px) {
+  .TimeTable tbody th {
+    padding: 20px 10px;
+  }
+
+  .TimeTable tbody th div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .TimeTable tbody th time,
+  .TimeTable tbody th span {
+    display: block;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .TimeTable tbody th span {
+    margin: 1px 0;
+    writing-mode: vertical-lr;
+    text-align: center;
+    transform: translateX(0.125em)
+  }
+
+  .TimeTable tbody td {
+    padding: 20px 15px;
+  }
+}
+
+.TimeTable tbody td[itemprop="subEvent"] {
+  overflow-wrap: break-word;
+  vertical-align: top;
+}
+
+.TimeTable tbody td [itemprop="identifier"] {
+  display: block;
+}
+
+.TimeTable tbody td [itemprop="identifier"]::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: var(--color__accent);
+}
+
+.TimeTable tbody td > [itemprop="name"] {
+  display: block;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.TimeTable tbody td > [itemprop="name"]:not([lang="en"]) {
+  font-feature-settings: "palt" 1;
+  letter-spacing: 1px;
+}
+
+.TimeTable tbody td ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: var(--font-size__0);
+}
+
+.TimeTable tbody [itemprop="memberOf"] [itemprop="name"]::before {
+  content: "（";
+}
+
+.TimeTable tbody [itemprop="memberOf"] [itemprop="name"]::after {
+  content: "）";
+}
+
+@media (max-width: 544px) {
+  .TimeTable {
+    display: block;
+    border-top: 2px solid var(--color__black);
+    border-bottom: 1px solid var(--color__border);
+  }
+
+  .TimeTable thead {
+    display: none;
+  }
+
+  .TimeTable th,
+  .TimeTable td {
+    display: block;
+  }
+
+  .TimeTable tbody tr {
+    display: block;
+    padding: 10px;
+  }
+}
+
 #Information {
   max-width: 640px;
   margin-right: auto;
@@ -712,7 +856,7 @@ ul {
 }
 
 #Sessions [itemprop="subEvent"] footer {
-  font-size: var(--font-size__1);
+  font-size: var(--font-size__0);
 }
 
 #Sessions [itemprop="subEvent"] [itemprop="identifier"] {
