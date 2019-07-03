@@ -94,7 +94,8 @@ a:hover {
   text-decoration: none;
 }
 
-a[href]:focus {
+a[href]:focus,
+summary:focus {
   outline: 3px solid var(--color__accent);
   outline-offset: 2px;
 }
