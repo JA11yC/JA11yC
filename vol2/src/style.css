@@ -297,6 +297,24 @@ ul {
   margin-right: 4px;
 }
 
+.SessionList li {
+  line-height: 1.5;
+}
+
+.SessionList li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.SessionDocumentList {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.SessionDocumentList li:not(:first-child) {
+  margin-left: 12px;
+}
+
 #SpotLight {
   position: absolute;
   width: 100%;
@@ -406,6 +424,21 @@ ul {
 #Cover .location {
   margin: 1em 0 0;
   font-size: var(--font-size__4);
+}
+
+#Epilogue {
+  padding: 2em;
+}
+
+#Epilogue p:first-of-type {
+  font-size: var(--font-size__3);
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+#Epilogue .inner {
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 #Message {
