@@ -89,6 +89,7 @@ sans-serif;
 
 body {
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 a {
