@@ -493,10 +493,6 @@ serif;
   font-size: var(--font-size__4);
 }
 
-#Epilogue {
-  padding: 2em;
-}
-
 #Epilogue p:first-of-type {
   font-size: calc(18 / 14 * 1rem);
   font-size: var(--font-size__3);
@@ -505,8 +501,21 @@ serif;
 }
 
 #Epilogue .inner {
-  max-width: 640px;
-  margin: 0 auto;
+  max-width: 37em;
+}
+
+#Epilogue p {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 545px) {
+  #Epilogue p {
+    background-color: transparent;
+  }
+
+  #Epilogue p span {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 }
 
 #Message {
