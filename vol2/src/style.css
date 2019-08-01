@@ -307,12 +307,18 @@ ul {
 
 .SessionDocumentList {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
 }
 
-.SessionDocumentList li:not(:first-child) {
-  margin-left: 12px;
+.SessionDocumentList li {
+  flex-shrink: 0;
+}
+
+.SessionDocumentList li:not(:last-child) {
+  margin-right: 12px;
+  margin-bottom: 12px;
 }
 
 #SpotLight {
