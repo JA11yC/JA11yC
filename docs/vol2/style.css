@@ -493,6 +493,19 @@ serif;
   font-size: var(--font-size__4);
 }
 
+#Letter {
+  padding: 60px 2em;
+  padding: var(--margin__4) 2em;
+  background-color: #ffffff;
+  background-color: var(--color__bg);
+  box-shadow: 0 10px 20px rgba(255, 50, 44, 0.2);
+}
+
+#Letter > section {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
 #Epilogue p:first-of-type {
   font-size: calc(18 / 14 * 1rem);
   font-size: var(--font-size__3);
@@ -500,8 +513,13 @@ serif;
   letter-spacing: 1px;
 }
 
-#Epilogue .inner {
+#Epilogue {
   max-width: 37em;
+  margin: 0 auto;
+}
+
+#Epilogue > *:first-child {
+  margin-top: 0;
 }
 
 #Epilogue p {
@@ -516,14 +534,6 @@ serif;
   #Epilogue p span {
     background-color: rgba(255, 255, 255, 0.75);
   }
-}
-
-#Message {
-  padding: 60px 2em;
-  padding: var(--margin__4) 2em;
-  background-color: #ffffff;
-  background-color: var(--color__bg);
-  box-shadow: 0 10px 20px rgba(255, 50, 44, 0.2);
 }
 
 #Message h2 {
@@ -542,11 +552,6 @@ serif;
   margin: 32px auto 0;
   background-color: #ff5044;
   background-color: var(--color__accent);
-}
-
-#Message .inner {
-  max-width: 640px;
-  margin: 0 auto;
 }
 
 #Message aside h3 {
