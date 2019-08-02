@@ -89,6 +89,7 @@ sans-serif;
 
 body {
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -328,6 +329,31 @@ serif;
   margin-right: 4px;
 }
 
+.SessionList li {
+  line-height: 1.5;
+}
+
+.SessionList li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.SessionDocumentList {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+}
+
+.SessionDocumentList li {
+  flex-shrink: 0;
+}
+
+.SessionDocumentList li:not(:last-child) {
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
 #SpotLight {
   position: absolute;
   width: 100%;
@@ -467,12 +493,47 @@ serif;
   font-size: var(--font-size__4);
 }
 
-#Message {
+#Letter {
   padding: 60px 2em;
   padding: var(--margin__4) 2em;
   background-color: #ffffff;
   background-color: var(--color__bg);
   box-shadow: 0 10px 20px rgba(255, 50, 44, 0.2);
+}
+
+#Letter > section {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#Epilogue p:first-of-type {
+  font-size: calc(18 / 14 * 1rem);
+  font-size: var(--font-size__3);
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+#Epilogue {
+  max-width: 37em;
+  margin: 0 auto;
+}
+
+#Epilogue > *:first-child {
+  margin-top: 0;
+}
+
+#Epilogue p {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 545px) {
+  #Epilogue p {
+    background-color: transparent;
+  }
+
+  #Epilogue p span {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 }
 
 #Message h2 {
@@ -491,11 +552,6 @@ serif;
   margin: 32px auto 0;
   background-color: #ff5044;
   background-color: var(--color__accent);
-}
-
-#Message .inner {
-  max-width: 640px;
-  margin: 0 auto;
 }
 
 #Message aside h3 {
