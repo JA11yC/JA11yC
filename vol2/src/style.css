@@ -459,20 +459,6 @@ ul {
   margin-top: 0;
 }
 
-#Epilogue p {
-  background-color: rgba(255, 255, 255, 0.75);
-}
-
-@media (min-width: 545px) {
-  #Epilogue p {
-    background-color: transparent;
-  }
-
-  #Epilogue p span {
-    background-color: rgba(255, 255, 255, 0.75);
-  }
-}
-
 #Message h2 {
   margin: 0 0 var(--margin__3);
   font-size: var(--font-size__5);
